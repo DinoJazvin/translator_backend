@@ -26,6 +26,8 @@ app.get("/", (req, res) => {
 app.use(cors({
     origin: "*", 
 }));
+
+app.options("*", cors()); // Allow preflight requests for all routes
   
 
 app.post("/call-openai", async (req, res) => {
