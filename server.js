@@ -33,7 +33,7 @@ app.use(cors({
     origin: ["https://inquisitive-syrniki-0f74d3.netlify.app/"], // Replace with your actual Netlify URL
 }));
 
-app.options("*", cors()); // Allow preflight requests for all routes
+// app.options("*", cors()); // Allow preflight requests for all routes
   
 
 app.post("/call-openai", async (req, res) => {
