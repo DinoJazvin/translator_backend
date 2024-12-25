@@ -23,8 +23,14 @@ app.get("/", (req, res) => {
 //     origin: "http://127.0.0.1:5500", 
 // }));
 
+// app.use(cors({
+//     origin: "*", 
+// }));
+
+app.options("*", cors()); // Allow preflight requests for all routes
+
 app.use(cors({
-    origin: "*", 
+    origin: ["https://inquisitive-syrniki-0f74d3.netlify.app/"], // Replace with your actual Netlify URL
 }));
 
 app.options("*", cors()); // Allow preflight requests for all routes
